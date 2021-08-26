@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Mulish:wght@200;300;400;500;700;800&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Mulish', sans-serif;
+}
+:root{
+  --mainColor:rgba(127, 179, 213 ,.8) ;
+}
+/* start component */
+.main-heading{
+  text-align: center;
+  color: #777;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.btn-valider{
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: skyblue;
+  border: none;
+}
+.btn-annule{
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: red;
+  border: none;
+
+}
+.btn-delete{
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: tomato;
+  border: none;
+
+}
+.table{
+  text-align: center;
+}
+.error{
+  text-align: center;
+  color: red;
+}
+/* end component */
+.App{
+  background-color: #eee;
+  background-repeat: repeat;
+  background-size: cover;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: 70px auto 70px;
+  grid-template-areas: "header header header header header header header header header header" "content content content content content content content content content content" "footer footer footer footer footer footer footer footer footer footer";
+}
+
+/* start header */
+.App .header{
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  background-color: var(--mainColor);
+}
+.App .header .container{
+  display: flex;
+  justify-content: space-between;
+
+}
+.App .header .container .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.App .header .container .logo span{
+  font-size: 30px;
+  font-weight: bold;
+  color: tomato;
+}
+.App .header .container .logo p{
+  font-weight: bold;
+  position: relative;
+  top: 20%;
+
+}
+.App .header .container nav{
+  display: flex;
+  align-items: center;
+}
+.App .header .container ul{
+  display: flex;
+}
+.App .header .container ul li{
+  margin-right: 20px;
+  list-style-type: none;
+}
+.App .header .container ul li a{
+  color: #2c4755;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -ms-transition: .2s;
+  -o-transition: .2s;
+  /* border-left: 1px solid blue; */
+}
+.App .header .container ul li a:hover{
+  background-color: rgba(1,1,1,0.5);
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-left: none;
+}
+/* end header */
+
+/* start content */
+.App .content {
+  margin-top: 40px;
+  grid-area: content;
+}
+
+.App .content .container .virement{
+  position: relative;
+ 
+  
+}
+.App .content .container .virement form{
+  
+  position: absolute;
+  padding: 70px;
+  left: 50%;
+  width: 600px;
+  color: white;
+  
+  transform: translate(-50%);
+  background-color: rgba(1,1,1,.5);
+  box-shadow: 2px 2px 2px 2px #777;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+.App .content .container .box{
+  position: relative;
+ 
+}
+.App .content .container .box article{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+.App .content .container .chercher form{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.App .content .container .chercher form input[type="number"]{
+  background-color: rgba(1,1,1,0.5);
+  margin-right: 20px;
+  width: 300px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: none;
+  color: white;
+}
+.App .content .container .home-page{
+  /* background-image: url('./images/banque2.jpg'); */
+  background-color: red;
+
+}
+
+/* end content */
+.App .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  background-color: var(--mainColor);
+}
+.App .footer p{
+  text-align: center;
+}
